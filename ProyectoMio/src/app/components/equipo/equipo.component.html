@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de registro</title>
+  <link rel="stylesheet" href="equipo.component.css">
+</head>
+<body>
+  <form action="procesar.php" method="post">
+    <h1>Registro</h1>
+    <div>
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre">
+    </div>
+    <div>
+      <label for="apellidos">Apellidos</label>
+      <input type="text" name="apellidos" id="apellidos">
+    </div>
+    <div>
+      <label for="correo">Correo electrónico</label>
+      <input type="email" name="correo" id="correo">
+    </div>
+    <div>
+      <label for="contraseña">Contraseña</label>
+      <input type="password" name="contraseña" id="contraseña">
+    </div>
+    <input type="submit" value="Registrarse">
+  </form>
+</body>
+</html>
