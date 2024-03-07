@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import Typed from 'typed.js';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

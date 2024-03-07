@@ -4,17 +4,23 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0;    
+}
+body {
     font-family: "Noto Sans", sans-serif;
-    
 }
 /*Menu*/
 .header {
+    z-index: 1000;
     background-color: #333333;
+    height: 85px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 85px;
     padding: 5px 10%;
 }
 .header .logo {
@@ -34,6 +40,25 @@
 .header .nav-links li{
     display: inline-block;
     padding: 0 20px;
+    font-size: 20px;
+}
+.nav{
+    max-width: 992px;
+    margin: 0 auto;
+}
+.menuH{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
+@media (max-width: 768px){
+    header{
+        background-color: red;
+    }
 }
 .header .nav-links li:hover{
     transform: scale(1.1);
@@ -52,7 +77,7 @@
     padding: 9px 25px;
     background: #A7A7A7;
     border: none;
-    border-radius: 50px;
+    border-radius: 30px;
     cursor: pointer;
     transition: al 0.3s ease 0s;    
 }
@@ -64,7 +89,7 @@
 .header .btn input{
     font-weight: 7px;
     color: #A7A7A7;
-    border-radius: 50px;
+    border-radius: 30px;
     padding: 9px 25px;
 }
 
@@ -144,24 +169,24 @@ section {
     flex-direction: column;
     align-items: center;
     text-align: justify;
-    justify-content: center;
 }
 
 #hero {
     background-color: #333333;
     text-align: center;
     padding: 100px 0; /* Aumenté el espacio vertical para dar más prominencia */
+    justify-content: center;
 }
 
 #hero h2 {
     color: #D7D7D7;
-    font-size: 2em; /* Tamaño de fuente más grande para mayor impacto */
+    font-size: 2.2em; /* Tamaño de fuente más grande para mayor impacto */
     margin-bottom: 20px;
 }
 
 #hero p {
     color: #77B0CC;
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 40px;
 }
 
@@ -178,14 +203,17 @@ section {
 
 #about, #enfoque, #servicios, #ayuda {
     background-color: #fff; /* Fondo blanco para las secciones de contenido */
+    align-items: center;
 }
 
 #about h2, #enfoque h4, #servicios h4, #ayuda h4 {
     color: #333;
+    font-size: 2em;
 }
 
 #about p, #enfoque p, #servicios p, #ayuda p {
     color: #555;
+    font-size: 1.5em;
 }
 
 /* Estilo adicional para las imágenes de las secciones de Enfoque y Ayuda */
