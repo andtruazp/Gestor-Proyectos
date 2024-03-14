@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Proyecto</title>
+    <!-- Agregar los enlaces a Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="actividades.component.css">
+</head>
+<body>
+    <!-- nvbar inicio-->  
+    <app-header></app-header>
+    <!-- nvbar fin-->  
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/proyecto">Proyecto</a></li>
+            <li class="breadcrumb-item active"  aria-current="page">Actividades</li>
+        </ol>
+    </nav>
+    <div class="container mt-5">
+        <!-- Sección para el formulario de proyecto -->
+        <form action="#" method="post" class="card">
+            <h5 class="card-title">Registra Actividad</h5>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="nombreActividad">Nombre de la Actividad:</label>
+                    <input type="text" class="form-control" id="nombreActividad" name="nombreActividad" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcionActividad">Descripción Detallada de la Actividad:</label>
+                    <textarea class="form-control" id="descripcionActividad" name="descripcionActividad" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="miembrosEquipo">Miembro de Equipo:</label>
+                    <input type="text" class="form-control" id="miembrosEquipo" name="miembrosEquipo" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+            </div>
+        </form>
+
+        <!-- Sección para buscar proyecto y mostrar actividades en tabla -->
+        <div class="mt-5 card">
+            <h5 class="card-title">Buscar Proyecto</h5>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="nombreProyectoBusqueda">Nombre del Proyecto:</label>
+                    <input type="text" class="form-control" id="nombreProyectoBusqueda" name="nombreProyectoBusqueda" required>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-block">Buscar</button>
+
+                <h5 class="mt-3">Actividades del Proyecto</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre de la Actividad</th>
+                            <th>Descripción</th>
+                            <th>Miembro que la Realiza</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Agregar aquí filas con información de actividades -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</body>
+</html>
